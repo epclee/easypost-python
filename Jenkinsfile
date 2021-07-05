@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Validate Build Env') {
             steps {
-                sh 'salt-call state.highstate'
+                sh 'sudo salt-call state.highstate'
             }
         }
         stage('Checkout Source') {
