@@ -23,7 +23,7 @@ pipeline {
         stage('Setup Env') {
             steps {
                 sh '''
-                    python3.6 -m virtualenv ./venv
+                    python -m virtualenv ./venv
                     ./venv/bin/pip install requests six pylint
                     ./venv/bin/pip install -r requirements-tests.txt
                 '''
